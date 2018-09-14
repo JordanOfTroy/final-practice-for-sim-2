@@ -7,6 +7,9 @@ import axios from 'axios'
 
 class Login extends Component {
 
+  handleClick () {
+    axios.get(`/api/display`)
+  }
  
 
   render () {
@@ -33,6 +36,7 @@ class Login extends Component {
         </div>
         <Link to = '/display'>
           <button
+            onClick = {this.handleClick}
           >Login, my dude!</button>
         </Link>
         
